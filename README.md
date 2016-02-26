@@ -1,2 +1,3 @@
 # indicator-microphone
-AppIndicator for microhpone
+AppIndicator for Ubuntu's microhpone relying on pacmd.
+Periodicaly checks microphone status and displays an indicator in top panel.
