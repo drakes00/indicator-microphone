@@ -34,12 +34,18 @@ class PeriodicTimer(object):
 
 def build_menu():
     menu = gtk.Menu()
+    item_toggle = gtk.MenuItem("Toggle")
+    item_toggle.connect("activate", toggle)
+    menu.append(item_toggle)
     item_quit = gtk.MenuItem("Quit")
     item_quit.connect("activate", quit)
     menu.append(item_quit)
     menu.show_all()
     return menu
  
+def toggle(source):
+    subprocess.check_output("pactl set-source-mute 2 toggle", shell=True)
+
 def quit(source):
     gtk.main_quit()
 
