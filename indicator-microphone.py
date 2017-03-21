@@ -44,7 +44,7 @@ def build_menu():
     return menu
  
 def toggle(source):
-    subprocess.check_output("pactl set-source-mute 2 toggle", shell=True)
+    subprocess.check_output("pactl set-source-mute 4 toggle", shell=True)
 
 def quit(source):
     gtk.main_quit()
